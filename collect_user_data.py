@@ -27,7 +27,8 @@ def make_callback(question,answer):
 
 for na,a in enumerate(answers):
     for nc,c in enumerate(choices):
-        Radiobutton(frame, text=str(na+1)+str(c), variable=a, value=c, command=make_callback(na+1,c)).grid(row=na,column=nc)
+        Label(root, text=str(na+1)+")").grid(row=na,column=0)
+        Radiobutton(frame, text=str(c), variable=a, value=c, command=make_callback(na+1,c)).grid(row=na,column=nc+1)
 
 ### RUN GUI ###
 root.mainloop()
